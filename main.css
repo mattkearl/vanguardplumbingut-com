@@ -336,7 +336,7 @@ strong { color: var(--text); font-weight: 600; }
   background-position: 72% center;
   background-repeat: no-repeat;
   opacity: 0;
-  transition: opacity 1.4s ease;
+  transition: opacity 1.6s ease;
   z-index: 0;
 }
 .hero-bg--active { opacity: 1; }
@@ -550,10 +550,13 @@ strong { color: var(--text); font-weight: 600; }
 /* ===== ABOUT ===== */
 .about-grid {
   display: grid;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 1fr 400px;
   gap: var(--spacing-4xl);
   align-items: start;
 }
+
+.about-photo-frame { order: 2; }
+.about-body        { order: 1; }
 
 .about-photo-frame {
   position: relative;

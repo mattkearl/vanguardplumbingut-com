@@ -59,9 +59,9 @@
     }
   ];
 
-  var INTERVAL     = 7000;  // ms between slides
-  var FADE_MS      = 1400;  // must match CSS transition duration
-  var TEXT_FADE_MS = 500;
+  var INTERVAL     = 11000; // ms between slides
+  var FADE_MS      = 1600;  // must match CSS transition duration
+  var TEXT_FADE_MS = 600;
 
   var currentIndex = 0;
   var activeLayer  = 0;
