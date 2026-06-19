@@ -93,7 +93,8 @@
   h1.style.transition   = 'opacity ' + TEXT_FADE_MS + 'ms ease';
   lead.style.transition = 'opacity ' + TEXT_FADE_MS + 'ms ease';
 
-  // Initialize first slide (already set as inline style on the div, so just mark active)
+  // Initialize first slide with the correct image format
+  layers[0].style.backgroundImage = "url('assets/images/derek-hero-01" + ext + "')";
   layers[0].classList.add('hero-bg--active');
 
   function goToSlide(index) {
