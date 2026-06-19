@@ -242,10 +242,6 @@
     <div class="container">
       <div class="about-grid">
 
-        <div class="about-photo-frame reveal">
-          <img src="assets/images/DerekandKennedi.jpg" alt="Derek and Kennedi Wallace, founders of Vanguard Plumbing" loading="lazy">
-        </div>
-
         <div class="about-body reveal">
           <div class="section-eyebrow">Meet the Owner</div>
           <h2>Built on Integrity. Backed by Experience.</h2>
@@ -263,6 +259,10 @@
             <a href="#contact-form-section" class="btn btn-primary">Get a Free Estimate</a>
           </div>
 
+        </div>
+
+        <div class="about-photo-frame reveal">
+          <img src="assets/images/DerekandKennedi.jpg" alt="Derek and Kennedi Wallace, founders of Vanguard Plumbing" loading="lazy">
         </div>
 
       </div>
@@ -422,7 +422,8 @@
             <p>Describe what's going on and we'll get back to you within a few hours. For emergencies, call directly.</p>
           </div>
 
-          <form id="contact-form">
+          <form id="contact-form" action="https://formspree.io/f/xgobbdkb" method="POST">
+            <input type="hidden" name="_subject" value="New Service Request — Vanguard Plumbing">
             <div class="form-grid-2">
               <div class="form-group">
                 <label for="name" class="form-label">Full Name *</label>
