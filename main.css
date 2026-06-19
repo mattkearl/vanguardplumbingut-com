@@ -320,9 +320,9 @@ strong { color: var(--text); font-weight: 600; }
 /* ===== HERO — FULL BLEED LEFT-ALIGNED ===== */
 .hero {
   position: relative;
-  aspect-ratio: 16 / 9;
-  min-height: 55vh;
-  max-height: 95vh;
+  /* clamp to 16:9 on wide screens; goes taller on narrow so cover crops
+     the sides and background-position actually controls what's visible */
+  height: clamp(55vh, 56.25vw, 92vh);
   display: flex;
   align-items: center;
   background-color: var(--bg);
