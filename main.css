@@ -790,87 +790,6 @@ strong { color: var(--text); font-weight: 600; }
   display: block;
 }
 
-/* ===== HOW IT WORKS ===== */
-.process-steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-xl);
-  position: relative;
-  margin-top: var(--spacing-3xl);
-}
-
-.process-steps::before {
-  content: '';
-  position: absolute;
-  top: 2.75rem;
-  left: calc(16.67% + var(--spacing-xl));
-  right: calc(16.67% + var(--spacing-xl));
-  height: 1px;
-  background: linear-gradient(to right, var(--accent) 0%, var(--border) 50%, var(--accent) 100%);
-  opacity: 0.3;
-  pointer-events: none;
-}
-
-.process-step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: var(--spacing-md);
-  padding: var(--spacing-2xl) var(--spacing-xl);
-  background: var(--surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-2xl);
-  position: relative;
-  transition: border-color var(--transition-fast), transform var(--transition-fast);
-}
-
-.process-step:hover {
-  border-color: oklch(0.58 0.26 242 / 0.5);
-  transform: translateY(-3px);
-}
-
-.process-step-num {
-  width: 5.5rem;
-  height: 5.5rem;
-  border-radius: 50%;
-  background: var(--accent-tint);
-  border: 1px solid oklch(0.58 0.26 242 / 0.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--accent-light);
-  position: relative;
-  z-index: 1;
-  flex-shrink: 0;
-}
-
-.process-step h3 {
-  font-family: var(--font-heading);
-  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
-  font-weight: 700;
-  color: var(--text);
-  letter-spacing: 0.01em;
-  margin: 0;
-}
-
-.process-step p {
-  color: var(--text-secondary);
-  font-size: 0.93rem;
-  line-height: 1.7;
-  margin: 0;
-}
-
-.process-link {
-  color: var(--accent-light);
-  text-decoration: none;
-}
-
-.process-link:hover { text-decoration: underline; }
-
 /* ===== FAQ ===== */
 .faq-grid {
   display: grid;
@@ -1218,9 +1137,6 @@ select.form-control option { background: var(--surface); color: var(--text); }
   .standard-mini-grid { grid-template-columns: 1fr; gap: var(--spacing-lg); }
 
   .services-grid { grid-template-columns: 1fr 1fr; }
-
-  .process-steps { grid-template-columns: 1fr; }
-  .process-steps::before { display: none; }
 
   .form-grid-2 { grid-template-columns: 1fr; }
 
