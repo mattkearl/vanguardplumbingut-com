@@ -1178,7 +1178,8 @@ select.form-control option { background: var(--surface); color: var(--text); }
 
 @media (max-width: 900px) {
   .about-grid { grid-template-columns: 1fr; gap: var(--spacing-2xl); }
-  .about-photo-frame { max-width: 420px; margin: 0 auto; aspect-ratio: 4/3; }
+  .about-photo-frame { max-width: 420px; margin: 0 auto; aspect-ratio: 4/3; order: -1; }
+  .about-body { order: 0; }
   .contact-dark-grid { grid-template-columns: 1fr; }
 }
 
