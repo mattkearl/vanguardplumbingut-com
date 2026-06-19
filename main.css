@@ -320,22 +320,31 @@ strong { color: var(--text); font-weight: 600; }
 /* ===== HERO — FULL BLEED LEFT-ALIGNED ===== */
 .hero {
   position: relative;
-  /* clamp to 16:9 on wide screens; goes taller on narrow so cover crops
-     the sides and background-position actually controls what's visible */
   height: clamp(55vh, 56.25vw, 92vh);
   display: flex;
   align-items: center;
   background-color: var(--bg);
-  background-image: url('assets/images/derek-hero.jpg');
+  padding-top: 80px;
+  overflow: hidden;
+}
+
+/* Crossfade background layers — controlled by hero-slideshow.js */
+.hero-bg {
+  position: absolute;
+  inset: 0;
   background-size: cover;
   background-position: 72% center;
   background-repeat: no-repeat;
-  padding-top: 80px;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+  z-index: 0;
 }
+.hero-bg--active { opacity: 1; }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(
     to right,
     oklch(0.07 0.012 257 / 0.78) 0%,
